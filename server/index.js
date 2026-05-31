@@ -19,12 +19,7 @@ app.use(
     crossOriginResourcePolicy: false,
   }),
 );
-app.use(
-  cors({
-    credentials: true,
-    origin: process.env.FRONTEND,
-  }),
-);
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("E-commerece");
